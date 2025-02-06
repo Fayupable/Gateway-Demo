@@ -281,6 +281,6 @@ For any inquiries or support, please contact:
 - GitHub: https://github.com/Fayupable
 
 ## Acknowledgments
-- Spring Cloud Team
-- Netflix OSS Team
-- Docker Team
+- Spring Cloud 
+- Netflix OSS 
+- Docker 
