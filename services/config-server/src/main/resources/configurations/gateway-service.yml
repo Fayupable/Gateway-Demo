@@ -1,0 +1,39 @@
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: restaurant-service
+          uri: lb://restaurant-service
+          predicates:
+            - Path=/restaurant/**
+        - id: auth-service
+          uri: lb://auth-service
+          predicates:
+            - Path=/auth/**
+        - id: user-service
+          uri: lb://user-service
+          predicates:
+            - Path=/user/**
+        - id: order-service
+          uri: lb://order-service
+          predicates:
+            - Path=/order/**
+        - id: payment-service
+          uri: lb://payment-service
+          predicates:
+            - Path=/payments/**
+        - id: notification-service
+          uri: lb://notification-service
+          predicates:
+            - Path=/notification/**
+
+server:
+  port: 8222
+
+auth:
+  token:
+    expirationInMils: 3600000
+    jwtSecret: 36763979244226452948404D635166546A576D5A7134743777217A25432A4620
